@@ -12,7 +12,7 @@ training_outputs = np.array([[0, 1, 1, 0]]).T
 
 np.random.seed(1)
 
-synaptic_weights = 2 * np.random.random((3, 1)) - 1
+synaptic_weights = np.random.normal(0, (1 / 3), size=(3, 1))
 
 print("random weights: " + str(synaptic_weights))
 
@@ -31,7 +31,7 @@ print(synaptic_weights)
 print("result")
 print(outputs)
 
-new_inputs = np.array([1, 1, 0])
+new_inputs = np.array([1, 1, 1])
 output = sigmoid(np.dot(new_inputs, synaptic_weights))
 
 print("new situation")
